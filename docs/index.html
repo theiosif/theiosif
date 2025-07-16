@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Andrei Iosif (theiosif) – Security Researcher</title>
+
+<meta name="google-adsense-account" content="ca-pub-2792311411352160">
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Security researcher. GWAPT • GCIH.">
+<meta name="author" content="Andrei Iosif">
+
+<!-- Open Graph -->
+<meta property="og:title" content="Andrei Iosif – Security Researcher">
+<meta property="og:description" content="Security researcher. GWAPT • GCIH.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://theiosif.github.io/">
+<meta property="og:image" content="https://avatars.githubusercontent.com/u/63240630?v=4">
+<meta name="twitter:card" content="summary">
+
+<link rel="canonical" href="https://theiosif.github.io/">
+
+<style>
+:root {
+  --font-body: system-ui, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  --radius: 8px;
+  --space-1: 0.25rem;
+  --space-2: 0.5rem;
+  --space-3: 1rem;
+  --space-4: 2rem;
+  --space-5: 4rem;
+  --max: 44rem;
+  --c-accent: #2f81f7;
+  --shadow-sm: 0 1px 2px rgba(0,0,0,.08);
+  --shadow-md: 0 4px 16px rgba(0,0,0,.12);
+}
+@media (prefers-color-scheme: light) {
+  :root {
+    --c-bg: #ffffff;
+    --c-bg-hero: linear-gradient(180deg,#f5f7ff 0%,#ffffff 60%);
+    --c-text: #1a1a1a;
+    --c-muted: #555;
+    --c-border: #d0d7de;
+    --c-card: #ffffff;
+  }
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --c-bg: #0d1117;
+    --c-bg-hero: linear-gradient(180deg,#0d1117 0%,#161b22 60%);
+    --c-text: #e6edf3;
+    --c-muted: #8b949e;
+    --c-border: #30363d;
+    --c-card: #161b22;
+  }
+}
+*{box-sizing:border-box;margin:0;padding:0;}
+html,body{height:100%;}
+body{
+  font-family:var(--font-body);
+  line-height:1.6;
+  background:var(--c-bg);
+  color:var(--c-text);
+  -webkit-font-smoothing:antialiased;
+}
+a{color:var(--c-accent);text-decoration:none;}
+a:hover,a:focus{text-decoration:underline;}
+img{max-width:100%;height:auto;display:block;}
+.container{max-width:var(--max);margin:0 auto;padding:0 var(--space-3);}
+
+header{
+  padding:var(--space-2) ;
+  text-align:center;
+  border-bottom:1px solid var(--c-border);
+}
+header h1{font-size:1.6rem;font-weight:700;}
+
+.hero{
+  padding:var(--space-5) 0 var(--space-4);
+  text-align:center;
+  background:var(--c-bg-hero);
+}
+.hero img{
+  width:160px;height:160px;border-radius:50%;
+  margin:0 auto var(--space-3);
+  border:3px solid var(--c-border);
+  object-fit:cover;
+  box-shadow:var(--shadow-sm);
+}
+.hero p{font-size:1.25rem;color:var(--c-muted);}
+.actions{margin-top:var(--space-4);display:flex;justify-content:center;gap:var(--space-3);flex-wrap:wrap;}
+
+.btn{
+  display:inline-block;
+  padding:var(--space-2) var(--space-3);
+  border:1px solid var(--c-accent);
+  border-radius:var(--radius);
+  background:transparent;
+  color:var(--c-accent);
+  font-weight:600;
+  line-height:1.2;
+  cursor:pointer;
+  transition:background .15s,color .15s,transform .15s;
+}
+.btn:hover,.btn:focus{
+  background:var(--c-accent);
+  color:#fff;
+  text-decoration:none;
+  transform:translateY(-1px);
+}
+
+main{padding:var(--space-5) 0;}
+section{margin-bottom:var(--space-5);}
+section h2{text-align:center;margin-bottom:var(--space-3);font-size:1.35rem;}
+section p{text-align:center;color:var(--c-muted);max-width:32rem;margin:0 auto;}
+
+.cards{
+  margin-top:var(--space-4);
+  display:grid;
+  gap:var(--space-3);
+}
+@media (min-width:480px){
+  .cards{grid-template-columns:repeat(auto-fit,minmax(16rem,1fr));}
+}
+.card{
+  background:var(--c-card);
+  border:1px solid var(--c-border);
+  border-radius:var(--radius);
+  padding:var(--space-3);
+  box-shadow:var(--shadow-sm);
+  transition:transform .15s,box-shadow .15s;
+}
+.card:hover,.card:focus-within{
+  transform:translateY(-2px);
+  box-shadow:var(--shadow-md);
+}
+.card h3{
+  margin-bottom:var(--space-2);
+  font-size:1.1rem;
+}
+.card ul{
+  list-style:none;
+  padding-left:0;
+  margin-left:0;
+}
+.card ul li{
+  margin-bottom:var(--space-1);
+  color:var(--c-text);
+}
+.card ul li small{
+  display:block;
+  color:var(--c-muted);
+  font-size:0.85em;
+}
+
+footer{
+  text-align:center;
+  padding:var(--space-4) 0;
+  border-top:1px solid var(--c-border);
+  font-size:0.875rem;
+  color:var(--c-muted);
+}
+.social{
+  margin-bottom:var(--space-2);
+  display:flex;
+  justify-content:center;
+  gap:var(--space-3);
+  font-size:1.25rem;
+}
+.visually-hidden{
+  position:absolute!important;width:1px;height:1px;margin:-1px;padding:0;border:0;
+  clip:rect(0 0 0 0);overflow:hidden;white-space:nowrap;
+}
+</style>
+</head>
+<body>
+<a class="visually-hidden" href="#main">Skip to content</a>
+
+<header role="banner">
+  <div class="container">
+    <h1><a href="/" rel="home">$id</a></h1>
+  </div>
+</header>
+
+<section class="hero" id="top" role="region" aria-label="Intro">
+  <img src="https://avatars.githubusercontent.com/u/63240630?v=4" alt="Avatar for GitHub user @theiosif" loading="lazy">
+  <p></p>
+  <div class="actions">
+    <a class="btn" href="https://github.com/theiosif" target="_blank" rel="noopener me">GitHub</a>
+    <a class="btn" href="https://www.linkedin.com/in/theiosif" target="_blank" rel="noopener me">LinkedIn</a>
+    <a class="btn" href="https://orcid.org/0000-0003-1867-1542" target="_blank" rel="noopener me">Publications (ORCID)</a>
+  </div>
+</section>
+
+<main id="main">
+  <section id="about">
+    <h2>About</h2>
+    <p>Cybersecurity Consulting and R&D.</p>
+
+    <div class="cards">
+      <!-- CERTIFICATIONS -->
+      <article class="card" tabindex="0">
+        <header>
+          <h3>Certifications</h3>
+        </header>
+        <ul>
+          <li><strong>GIAC GCIH (SEC 504)</strong> <small><!-- TODO date -->Incident Handler</small></li>
+          <li><strong>GIAC GWAPT (SEC542)</strong> <small><!-- TODO date -->Web App Penetration Tester</small></li>
+          <li><strong>GIAC GWEB (SEC522)</strong><i> exam pending</i> <small><!-- TODO date -->Web App Defender</small></li>
+          <li><strong>CISCO:</strong> CCNA, FirePower • <strong>Fortinet</strong> NSE-3<small>Networking certs </small></li>
+        </ul>
+      </article>
+
+      <!-- LANGUAGES -->
+      <article class="card" tabindex="0">
+        <header>
+          <h3>Languages</h3>
+        </header>
+        <ul>
+          <li><strong><!-- TODO native language -->English</strong> <small><!-- level -->Proficient (C2)</small></li>
+          <li><strong><!-- TODO -->German</strong> <small><!-- level -->Business Fluent (C1)</small></li>
+          <li><strong><!-- TODO -->Spanish</strong> <small><!-- level --> Advanced (B2) </small></li>
+          <li><strong><!-- TODO -->Romanian</strong> <small><!-- level -->Native </small></li>
+          <!-- Remove / edit / reorder as needed -->
+        </ul>
+      </article>
+    </div>
+  </section>
+
+  <!-- Optional: highlight selected research, tools, CVEs -->
+  <!--
+  <section id="work">
+    <h2>Selected Work</h2>
+    <p>Short list of tools, writeups, and research publications.</p>
+  </section>
+  -->
+</main>
+
+<footer role="contentinfo">
+  <div class="social">
+    <a href="https://github.com/theiosif" aria-label="GitHub" target="_blank" rel="noopener">🐙</a>
+    <a href="https://www.linkedin.com/in/theiosif" aria-label="LinkedIn" target="_blank" rel="noopener">🔗</a>
+  </div>
+  <div>&copy; <span id="y"></span> Andrei Iosif.</div>
+</footer>
+
+<script>
+document.getElementById('y').textContent = new Date().getFullYear();
+</script>
+</body>
+</html>
